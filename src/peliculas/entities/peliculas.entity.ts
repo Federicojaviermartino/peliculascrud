@@ -1,13 +1,14 @@
-export class Peliculas {
-    _id: string;
-    name: string;
-    image_url: string;
-    tagline: string;
-    first_brewed: string;
-    description: string;
-    attenuation_level: number;
-    brewers_tips: string;
-    contributed_by: string;
-    expireAt: string;
-    __v: number;
+import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
+import { Document } from 'mongoose';
+
+@Schema()
+export class Pelicula extends Document {
+    @Prop()
+    titulo: string;
+
+    @Prop()
+    director: string;
+
 }
+
+export const PeliculaSchema = SchemaFactory.createForClass(Pelicula);
