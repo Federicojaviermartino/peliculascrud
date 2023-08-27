@@ -8,9 +8,7 @@ import { MongooseModule } from '@nestjs/mongoose';
 
 @Module({
   imports: [
-    MongooseModule.forRoot('mongodb+srv://federicojaviermartino:Elefantes30.@cluster0.onswtba.mongodb.net/', {
-      useUnifiedTopology: true,
-    }),
+    MongooseModule.forRoot('mongodb+srv://federicojaviermartino:Elefantes30.@cluster0.onswtba.mongodb.net/'),
   ],
   controllers: [AppController, PeliculasController],
   providers: [AppService, PeliculasService],
