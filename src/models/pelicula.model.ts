@@ -1,4 +1,4 @@
-import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
+import { Schema, Prop, SchemaFactory } from '@nestjs/mongoose';
 import { Document } from 'mongoose';
 
 @Schema()
@@ -8,6 +8,9 @@ export class Pelicula extends Document {
 
     @Prop()
     director: string;
+
+    @Prop()
+    año: number;
 
 }
 
